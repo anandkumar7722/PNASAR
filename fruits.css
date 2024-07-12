@@ -1,0 +1,12 @@
+p{
+
+    font-size: 46px; /* Increase font size */
+    color: rgb(246, 174, 5); 
+    border-width: 2px;
+}
+body{
+    
+    background-image: url('fruit.jpg') ;
+    background-size:auto;
+     /* This ensures the image covers the entire background */
+}

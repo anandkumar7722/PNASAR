@@ -1,0 +1,39 @@
+p{
+
+    font-size: 46px; /* Increase font size */
+    color: rgb(246, 174, 5); 
+    border-width: 2px;
+}
+body{
+    
+    background-image: url('vegetable.jpg') ;
+    background-size:auto;
+     /* This ensures the image covers the entire background */
+}
+
+h1{
+ 
+    border-width: 25px;
+    font-size: 80px;
+    color: #dd1414; /* Text color */
+    text-shadow: 
+         1px 1px 0 #000,  
+         1px -1px 0 #000,
+        -1px  1px 0 #000,
+         1px  1px 0 #000; //* Change text color to white */
+}
+p{
+
+    font-size: 46px; /* Increase font size */
+    color: rgb(246, 174, 5); 
+    border-width: 2px;
+}
+container
+{
+    font-size: 46px;
+
+}
+script{
+
+    font-size: 46px;
+}

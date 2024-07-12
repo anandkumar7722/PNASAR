@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Quiz</title>
+</head>
+<body>
+    <div id="container">
+         <center>
+            <hr>
+        <h1>Welcome to the Quiz!</h1>
+        <p>Please select a topic:</p>
+        <hr>
+         </center>
+        <ul> 
+            <center>      
+            <button style="height: 18px;; width:80px ;"><a href="C:\Users\ideag\OneDrive\Desktop\website\vegetable.html">Vegetables</a></button>
+            <br>
+            <br>
+            <br>
+            <br>
+            <button> <a href="C:\Users\ideag\OneDrive\Desktop\website\fruits.html">Fruits</a></button>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <button><a href="C:\Users\ideag\OneDrive\Desktop\website\dry fruits .html">dryfruits</a></button>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <button><a href="C:\Users\ideag\OneDrive\Desktop\website\cookies.html">Cookies & Biscuits</a></button>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <button><a href="C:\Users\ideag\OneDrive\Desktop\website\grains.html">Grains</a></button>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+         </div>
+        </center>
+        </ul>
+    </div>
+
+    <script>
+        function Vegetables() {
+            const questions = [
+                "Choose the correct vegetable:",
+                "Choose the correct vegetable:",
+                "Choose the correct vegetable:",
+                "Choose the correct vegetable:",
+                "Choose the correct vegetable:"
+            ];
+            
+            const choices = [
+                ["a. yam", "b. cashew", "c. pea"],
+                ["a. apple", "b. banana", "c. orange"],
+                ["a. almond", "b. walnut", "c. raisin"],
+                ["a. chocolate chip cookie", "b. gingerbread", "c. shortbread"],
+                ["a. rice", "b. pasta", "c. quinoa"]
+            ];
+            
+            const answers = ['a', 'c', 'b', 'a', 'c'];
+            
+            let score = 0;
+            
+            for (let i = 0; i < 5; i++) {
+                (questions[i]);
+                
+                for (let j = 0; j < 3; j++) {
+                    (choices[i][j]);
+                }
+                
+                let userAnswer = prompt("Enter your choice (a, b, or c):");
+                
+                if (userAnswer && userAnswer.toLowerCase() === answers[i]) {
+                    alert("Correct!");
+                    score++;
+                } else {
+                    alert("Incorrect. The correct answer is " + answers[i] + ".");
+                }
+            }
+            
+            alert("Your final score is " + score + " out of 5.");
+        }
+
+        function startQuiz(topic) {
+            switch (topic) {
+                case 1:
+                    alert("Vegetable");
+                    Vegetables();
+                    break;
+                case 2:
+                    alert("Fruits");
+                    fruits();
+                    break;
+                case 3:
+                    alert("Dry Fruits");
+                    dryfruits();
+                    break;
+                case 4:
+                    alert("Cookies & Biscuits");
+                    break;
+                case 5:
+                    alert("Grains");
+                    break;
+                default:
+                    alert("Enter a correct choice.");
+            }
+        }
+        function fruits() {
+            const questions = [
+                "Choose the correct fruits:",
+                "Choose the correct fruits:",
+                "Choose the correct fruits:",
+                "Choose the correct fruits:",
+                "Choose the correct fruits:"
+            ];
+            
+            const choices = [
+                ["a. drupe", "b.bitter guard ", "c. whole rye"],
+                ["a. rde velvet", "b. sunflower seed", "c. aggregate"],
+                ["a. oats", "b. cherry", "c. coconut"],
+                ["a. blueberry", "b. whole sorghum", "c. short bread"],
+                ["a. fig roll", "b. turnip", "c. avocado"]
+            ];
+            
+            const answers = ['a', 'c', 'b', 'a', 'c'];
+            
+            let score = 0;
+            
+            for (let i = 0; i < 5; i++) {
+                alert(questions[i]);
+                
+                for (let j = 0; j < 3; j++) {
+                   alert (choices[i][j]);
+                }
+                
+                let userAnswer = prompt("Enter your choice (a, b, or c):");
+                
+                if (userAnswer && userAnswer.toLowerCase() === answers[i]) {
+                    alert("Correct!");
+                    score++;
+                } else {
+                    alert("Incorrect. The correct answer is " + answers[i] + ".");
+                }
+            }
+            
+            alert("Your final score is " + score + " out of 5.");
+        }
+        function dryfruits() {
+            const questions = [
+                "Choose the correct dry fruit:",
+                "Choose the correct dry fruit:",
+                "Choose the correct dry fruit:",
+                "Choose the correct dry fruit:",
+                "Choose the correct dry fruit:"
+            ];
+            
+            const choices = [
+                ["a. peanut", "b. amaranth", "c. apricot"],
+                ["a. bulgur", "b. cashew", "c. cantaloup"],
+                ["a. hazelnut", "b. red velvet", "c. drupe"],
+                ["a. oats", "b. macaroons", "c. macadania"],
+                ["a. millet", "b. pumpkin seed", "c. sincker doodle"]
+            ];
+            
+            const answers = ['a', 'b', 'a', 'c', 'b'];
+            
+            let score = 0;
+            
+            for (let i = 0; i < 5; i++) {
+                alert(questions[i]);
+                
+                for (let j = 0; j < 3; j++) {
+                   alert (choices[i][j]);
+                }
+                
+                let userAnswer = prompt("Enter your choice (a, b, or c):");
+                
+                if (userAnswer && userAnswer.toLowerCase() === answers[i]) {
+                    alert("Correct!");
+                    score++;
+                } else {
+                    alert("Incorrect. The correct answer is " + answers[i] + ".");
+                }
+            }
+            
+            alert("Your final score is " + score + " out of 5.");
+        }
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Main Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="container">
+       
+        <ul>
+            <center>
+                <hr>
+            <h1>Welcome to Our Website</h1>
+            <p>Discover amazing services and explore our portfolio.</p>
+            <hr>
+            <br>
+            <br>
+            <li><button onclick="startQuiz(1)">Start Quiz</button></li>
+        </center>
+           
+        </ul>
+        <div id="quizArea" style="display: none;">
+            <!-- Quiz questions and choices will be dynamically added here -->
+        </div>
+    </div>
+
+    <script>
+        function startQuiz(topic) {
+            switch (topic) {
+                case 1:
+                    document.getElementById('quizArea').innerHTML = generateQuestions();
+                    document.getElementById('quizArea').style.display = 'block';
+                    break;
+                // Add cases for other quiz topics here
+                default:
+                    alert("Enter a correct choice.");
+            }
+        }
+
+        function generateQuestions() {
+            let questionsHTML = '';
+            const questions = [
+             "1.choose the correct grains?",
+             "2.choose the correct grains?",
+             "3.choose the correct grains?",
+             "4.choose the correct grains?",
+             "5.choose the correct grains?"
+    
+            ];
+            
+            const choices = [
+              [ "a.fig roll","b.pistachio","c.quinoa"],
+              ["a.oats","b.granberry","c.bruessls sprout"],
+              ["a.short bread","b.amaranth","c.macaroons"],
+              ["a.black rice","b.sinckerdoodle","c.yam"],
+              ["a.aggregate","b.zucchini","c.quinoa"]
+        ];
+
+            questions.forEach((question, index) => {
+                questionsHTML += `<p>${question}</p>`;
+                choices[index].forEach(choice => {
+                    questionsHTML += `<label><input type="radio" name="question${index}" value="${choice.split('.')[0]}">${choice}</label><br>`;
+                });
+            });
+
+            questionsHTML += '<button onclick="checkAnswers()">Submit Answers</button>';
+
+            return questionsHTML;
+        }
+
+        function checkAnswers() {
+            const answers = ['c', 'a', 'b', 'a', 'c'];
+            let score = 0;
+        
+            for (let i = 0; i < 5; i++) {
+                const userAnswer = document.querySelector(`input[name="question${i}"]:checked`);
+                if (userAnswer && userAnswer.value === answers[i]) {
+                    score++;
+                }
+            }
+
+            alert("Your final score is " + score + " out of 5.");
+        }
+        
+    </script>
+</body>
+</html>
